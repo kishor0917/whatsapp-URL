@@ -15,25 +15,11 @@ function ContactForm() {
   };
 
   const sendToWhatsApp = () => {
-    let { name, email, mobile, query } = form;
+    const { name, email, mobile, query } = form;
 
-    // Validation
+    // 🛑 Basic validation
     if (!name || !email || !mobile || !query) {
       alert("Please fill all fields");
-      return;
-    }
-
-    // Clean number (remove spaces, +, etc.)
-    let cleanedNumber = mobile.replace(/\D/g, "");
-
-    // Auto add India country code if 10 digits
-    if (cleanedNumber.length === 10) {
-      cleanedNumber = "91" + cleanedNumber;
-    }
-
-    // Final check
-    if (cleanedNumber.length < 12) {
-      alert("Enter valid mobile number with country code");
       return;
     }
 
@@ -43,7 +29,10 @@ Email: ${email}
 Mobile: ${mobile}
 Query: ${query}`;
 
-    const url = `https://wa.me/${cleanedNumber}?text=${encodeURIComponent(message)}`;
+    // ✅ YOUR FIXED NUMBER (India format)
+    const phoneNumber = "918904666504";
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
   };
@@ -70,7 +59,7 @@ Query: ${query}`;
         <input
           type="tel"
           name="mobile"
-          placeholder="Mobile Number "
+          placeholder="Mobile Number"
           onChange={handleChange}
         />
 

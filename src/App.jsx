@@ -51,7 +51,7 @@ Query: ${query}`;
   return (
     <div className="container">
       <div className="form-box">
-        <h1>Luxury Contact ✨</h1>
+        <h1>Whatsapp Contact ✨</h1>
 
         <input
           type="text"

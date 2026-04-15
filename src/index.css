@@ -1,0 +1,74 @@
+/* Background */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  padding: 20px;
+}
+
+/* Glass Form */
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* Title */
+.form-box h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Inputs */
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+/* Placeholder */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+  color: #cbd5e1;
+}
+
+/* Button */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.form-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #3b82f6;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .form-box {
+    padding: 20px;
+  }
+}
